@@ -11,6 +11,7 @@ span { font-style: italic; color: salmon;font-weight: 220; }
 }
   .gridtable, th, td {
     border: 1px solid #123;
+    border-collapse:collapse;
   }
 .gridtable a { 
   text-decoration: 
