@@ -1,0 +1,20 @@
+doctype5
+html
+  head
+    title Add new customer
+    link(href='/styles/style.css', rel='stylesheet')
+  body
+    #wrap
+      h3 Customer Details
+      form(id='form', method='POST', action='/customer/create')
+        p
+          label(for='Name') Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          input(type='text', id='name', name='name')
+        p
+          label(for='email') Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          input(type='email', id='email', name='email')
+        p
+          label(for='telephone') Telephone&nbsp;
+          input(type='tel', id='telephone', name='telephone')
+        p
+          input(type='submit', value='Add Customer')

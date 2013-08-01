@@ -1,6 +1,6 @@
 exports.index = function (req, res) {
   'use strict';
-  res.render('home/index', { title: 'Home made', firstParagraph: 'Welcome to the first paragraph part.'});
+  res.render('home/index', { title: 'Home made', firstParagraph:'Welcome to the first paragraph part.'});
 };
 
 exports.contact = function (req, res) {

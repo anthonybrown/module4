@@ -1,6 +1,7 @@
 var express = require('express')
   , path    = require('path')
-  , home    = require('./routes/home.js');;
+  , home    = require('./routes/home.js')
+  , customer= require('./routes/customer.js');
 
 var app = express();
 
@@ -8,6 +9,7 @@ app.configure( function () {
   'use strict';
   app.set('view engine', 'jade');
   app.set('views', __dirname + '/views');
+  app.use(express.bodyParser());
   app.use(require('stylus').middleware(__dirname + '/public'));
   app.use(express.logger('dev'));
   app.use(express.favicon());
@@ -16,6 +18,8 @@ app.configure( function () {
 
 app.get('/', home.index);
 app.get('/contact', home.contact);
-
+app.get('/customer', customer.index);
+app.get('/customer/create', customer.create);
+app.post('/customer/create', customer.createCustomer);
 
 app.listen(3000);
