@@ -40,6 +40,7 @@ span { font-style: italic; color: salmon;font-weight: 220; }
     height: 40px;
     background-color: #777;
     color:#f7f7f7;
+    text-shadow: -2px -2px 1px #222;
   }
   .gridtable tr {
     height: 50px;
