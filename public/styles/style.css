@@ -4,3 +4,37 @@
 }
 
 span { font-style: italic; color: salmon;font-weight: 220; }
+
+.gridtable {
+  width: 50%;
+  margin: 50px auto 0;  
+}
+  .gridtable th {
+    height: 40px;
+    background-color: #ddd;
+  }
+  .gridtable tr {
+    height: 40px;
+  }
+  .gridtable tr:nth-child(odd) {
+    background: #EEE;
+  }
+
+  #menu {
+    width: 165px;
+    float: right;
+    padding:1em;
+    border-radius: 4px;
+    background-color: #F33030;
+    color: #fafafa;
+    text-align: center;
+    margin: 20px 22% 0 0;
+    text-decoration: none;
+    border: 2px inset purple;
+  }
+  #menu a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: white;
+    text-shadow: -2px -2px 1px #333;
+  }
