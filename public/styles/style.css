@@ -6,18 +6,39 @@
 span { font-style: italic; color: salmon;font-weight: 220; }
 
 .gridtable {
-  width: 50%;
-  margin: 50px auto 0;  
+  width: auto;
+  margin: 50px auto 0;
 }
+  .gridtable, th, td {
+    border: 1px solid #123;
+  }
+.gridtable a { 
+  text-decoration: 
+  none;color: #b00;
+}
+  .gridtable a:hover {
+    cursor: pointer;
+  }
+
+.gridtable a.first { 
+  color: #33c;
+}
+
   .gridtable th {
+    width:140px;
     height: 40px;
-    background-color: #ddd;
+    background-color: #777;
+    color:#f7f7f7;
   }
   .gridtable tr {
-    height: 40px;
+    height: 50px;
   }
   .gridtable tr:nth-child(odd) {
     background: #EEE;
+  }
+
+  .gridtable td { 
+    padding:0.2em 1em;
   }
 
   #menu {
@@ -36,5 +57,5 @@ span { font-style: italic; color: salmon;font-weight: 220; }
     text-decoration: none;
     padding: 5px 10px;
     color: white;
-    text-shadow: -2px -2px 1px #333;
+    text-shadow: -2px -2px 1px #450c00;
   }
