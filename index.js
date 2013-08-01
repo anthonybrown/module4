@@ -20,6 +20,7 @@ app.get('/', home.index);
 app.get('/contact', home.contact);
 app.get('/customer', customer.index);
 app.get('/customer/create', customer.create);
+app.get('/customer/details/:id', customer.details);
 app.post('/customer/create', customer.createCustomer);
 
 app.listen(3000);

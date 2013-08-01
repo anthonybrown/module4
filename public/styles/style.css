@@ -1,3 +1,13 @@
+::selection {
+  background-color: salmon;
+  color: white;
+  text-shadow: none;
+}
+::-moz-selection {
+  background-color: salmon;
+  color: white;
+  text-shadow: none;
+}
 #wrap {
   width: 80%;
   margin: 70px auto 0;

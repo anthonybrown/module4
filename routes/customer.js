@@ -17,3 +17,9 @@ exports.createCustomer = function (req, res) {
 
   res.redirect('/customer');
 };
+
+exports.details = function (req, res) {
+  'use strict';
+  var customer = db.getCustomerById(req.params.id);
+  res.render('customer/details', { customer: customer });
+};
