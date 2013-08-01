@@ -23,3 +23,29 @@ exports.details = function (req, res) {
   var customer = db.getCustomerById(req.params.id);
   res.render('customer/details', { customer: customer });
 };
+
+exports.edit = function (req, res) {
+  'use strict';
+  var customer = db.getCustomerById(req.params.id);
+  res.render('customer/edit', { customer: customer });
+};
+
+exports.editCustomer = function (req, res) {
+  'use strict';
+  db.updateCustomer({id: req.params.id, name: req.body.name, email:req.body.email, telephone:req.body.telephone});
+  res.redirect('/customer');
+};
+
+exports.delete = function(req, res) {
+  'use strict';
+  db.deleteCustomer(req.params.id);
+  res.redirect('/customer');
+}
+
+
+
+
+
+
+
+

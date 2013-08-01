@@ -10,6 +10,7 @@ app.configure( function () {
   app.set('view engine', 'jade');
   app.set('views', __dirname + '/views');
   app.use(express.bodyParser());
+  app.use(express.methodOverride());
   app.use(require('stylus').middleware(__dirname + '/public'));
   app.use(express.logger('dev'));
   app.use(express.favicon());
@@ -22,5 +23,9 @@ app.get('/customer', customer.index);
 app.get('/customer/create', customer.create);
 app.get('/customer/details/:id', customer.details);
 app.post('/customer/create', customer.createCustomer);
+app.get('/customer/edit/:id', customer.edit);
+app.post('/customer/edit/:id', customer.editCustomer);
+app.delete('/customer/delete/:id', customer.delete);
+
 
 app.listen(3000);
