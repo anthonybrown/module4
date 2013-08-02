@@ -27,5 +27,8 @@ app.get('/customer/edit/:id', customer.edit);
 app.post('/customer/edit/:id', customer.editCustomer);
 app.delete('/customer/delete/:id', customer.delete);
 
+app.locals.clockData = { datetime: new Date().toUTCString() };
+
+
 
 app.listen(3000);

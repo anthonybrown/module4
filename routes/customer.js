@@ -51,3 +51,17 @@ exports.delete = function(req, res) {
   db.deleteCustomer(req.params.id);
   res.redirect('/customer');
 };
+
+exports.picture = function (req, res) {
+  'use strict';
+   var customer = db.getCustomerById(req.params.id);
+   if (req.query.attachment === 'true') {
+    res.download(customer.picture);
+   } else {
+    res.sendfile(customer.picture);
+   }
+};
+
+
+
+

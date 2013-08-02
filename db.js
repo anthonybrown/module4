@@ -26,3 +26,14 @@ exports.updateCustomer = function (customer) {
   'use strict';
   customerDb[customer.id] = customer;
 };
+
+
+exports.picture = function (req, res) {
+  'use strict';
+   var customer = db.getCustomerById(req.params.id);
+   if (req.query.attachment === 'true') {
+    res.download(customer.picture);
+   } else {
+    res.sendfile(customer.picture);
+   }
+};
