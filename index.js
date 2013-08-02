@@ -9,11 +9,11 @@ app.configure( function () {
   'use strict';
   app.set('view engine', 'jade');
   app.set('views', __dirname + '/views');
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
   app.use(require('stylus').middleware(__dirname + '/public'));
   app.use(express.logger('dev'));
   app.use(express.favicon());
+  app.use(express.bodyParser({ keepExtensions: true, uploadDir: path.join(__dirname, '/pictures')}));
+  app.use(express.methodOverride());
   app.use(express.static(path.join(__dirname, 'public')));
 });
 

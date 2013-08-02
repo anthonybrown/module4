@@ -7,7 +7,7 @@ html
     #wrap
       h1 register new customers.
       h3 customer details here
-      form(id='form', method='POST', action='/customer/create')
+      form(id='form', method='POST', action='/customer/create', enctype='multipart/form-data')
         p
           label(for='Name') Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           input(type='text', id='name', name='name')
@@ -16,6 +16,9 @@ html
           input(type='email', id='email', name='email')
         p
           label(for='telephone') Telephone&nbsp;
-          input(type='tel', id='telephone', name='telephone')
+          input(type='tel', id='telephone', name='telephone') 
+        p
+          label(for='picture') Picture&nbsp;
+          input(type='file', id='picture', name='picture')
         p
           input(type='submit', value='Add Customer')

@@ -22,7 +22,7 @@ exports.deleteCustomer = function (id) {
   customerDb[id].remove();
 };
 
-exports.updateCustomer= function (customer) {
+exports.updateCustomer = function (customer) {
   'use strict';
   customerDb[customer.id] = customer;
 };
